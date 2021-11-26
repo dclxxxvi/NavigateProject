@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Навигация по онлайн трансляциям</title>
+    <link href="assets/css/styles.css" rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<body class="body" id="body">
+
+<header class="header">
+	<div class="container">
+		<nav class="nav">
+			<a href="https://urfu.ru" class="urfu_logo" target="_blank"></a>
+			<a class="phone_link" href="tel: +7 (343) 375-44-44">+7 (343) 375-44-44</a>
+		</nav>
+	</div>
+</header>
+
+<div class="container">
+	<div class="level_menu">
+		<label class="level_item bakalavriat_btn" for="bakalavriat_btn">
+			<input class="level_btn" id="bakalavriat_btn" type='radio' name="tag" value="бакалавриат">
+			<div class="btn_text">Бакалавриат</div>
+		</label>
+		<label class="level_item magistratura_btn" for="magistratura_btn">
+			<input class="level_btn" id="magistratura_btn" type='radio' name="tag" value="магистратура">
+			<div class="btn_text">Магистратура</div>
+		</label>
+		<label class="level_item aspirantura_btn" for="aspirantura_btn">
+			<input class="level_btn" id="aspirantura_btn" type='radio' name="tag" value="аспирантура">
+			<div class="btn_text">Аспирантура</div>
+		</label>
+
+		<!-- <div class="level_item bakalavriat_btn">
+			<input class="level_btn" id="bakalavriat_btn" type='radio' name="level" value="бакалавриат">
+			<label class="btn_text" for='bakalavriat_btn'>Бакалавриат
+		</div>
+		<div class="level_item magistratura_btn">
+			<input class="level_btn" id="magistratura_btn" type='radio' name="level" value="магистратура">
+			<label class="btn_text" for='magistratura_btn'>Магистратура
+		</div>
+		<div class="level_item aspirantura_btn">
+			<input class="level_btn" id="aspirantura_btn" type='radio' name="level" value="аспирантура">
+			<label class="btn_text" for='aspirantura_btn'>Аспирантура
+		</div> -->
+	</div>
+</div>
+
+<div class="container">
+	<div class="main_nav">
+		<div class="institutes_nav">
+			<h1>Институт</h1>
+			<div class="nav_inner">
+				<div class="nav_item">
+					<input class="nav_btn" type="radio" name="tag" value="иеним">
+					<label class="nav_text">ИЕНиМ
+				</div>
+				<div class="nav_item">
+					<input class="nav_btn" type="radio" name="tag" value="инмит">
+					<label class="nav_text">ИНМиТ
+				</div>
+				<div class="nav_item">
+					<input class="nav_btn" type="radio" name="tag" value="инфо">
+					<label class="nav_text">ИнФО
+				</div>
+				<div class="nav_item">
+					<input class="nav_btn" type="radio" name="tag" value="инэу">
+					<label class="nav_text">ИнЭУ
+				</div>
+				<div class="nav_item">
+					<input class="nav_btn" type="radio" name="tag" value="ртф">
+					<label class="nav_text">ИРИТ-РТФ
+				</div>
+				<div class="nav_item">
+					<input class="nav_btn" type="radio" name="tag" value="иса">
+					<label class="nav_text">ИСА
+				</div>
+				<div class="nav_item">
+					<input class="nav_btn" type="radio" name="tag" value="итоо">
+					<label class="nav_text">ИТОО
+				</div>
+				<div class="nav_item">
+					<input class="nav_btn" type="radio" name="tag" value="ифксимп">
+					<label class="nav_text">ИФКСиМП
+				</div>
+				<div class="nav_item">
+					<input class="nav_btn" type="radio" name="tag" value="уги">
+					<label class="nav_text">УГИ
+				</div>
+				<div class="nav_item">
+					<input class="nav_btn" type="radio" name="tag" value="ураэнин">
+					<label class="nav_text">УралЭНИН
+				</div>
+				<div class="nav_item">
+					<input class="nav_btn" type="radio" name="tag" value="фти">
+					<label class="nav_text">ФТИ
+				</div>
+				<div class="nav_item">
+					<input class="nav_btn" type="radio" name="tag" value="хти">
+					<label class="nav_text">ХТИ
+				</div>
+				<div class="nav_item">
+					<input class="nav_btn" type="radio" name="tag" value="вуц">
+					<label class="nav_text">ВУЦ
+				</div>
+			</div>
+			<h2>Дополнительно</h2>
+			<div class="nav_inner">
+				<div class="nav_item">
+					<input class="nav_btn" type="radio" name="tag" value="иот">
+					<label class="nav_text">ИОТ
+				</div>
+				<div class="nav_item">
+					<input class="nav_btn" type="radio" name="tag" value="программы">
+					<label class="nav_text">Программы обучения
+				</div>
+				<div class="nav_item">
+					<input class="nav_btn" type="radio" name="tag" value="зачисление">
+					<label class="nav_text">Зачисление
+				</div>
+				<div class="nav_item">
+					<input class="nav_btn" type="radio" name="tag" value="дни">
+					<label class="nav_text">Дни открытых дверей
+				</div>
+				<div class="nav_item">
+					<input class="nav_btn" type="radio" name="tag" value="сериал">
+					<label class="nav_text">Сериал "Прием, УрФУ!"
+				</div>
+				<div class="nav_item">
+					<input class="nav_btn" type="radio" name="tag" value="другое">
+					<label class="nav_text">Другое
+				</div>
+			</div>
+		</div>
+		<div class="videos_nav">
+			<div class="videos_search">
+				<input class="search_field" id="search_bar" name="s" placeholder="Поиск" type="search">
+				<button class="search_btn" id="search_btn" type="button" onclick="videoSearch()"></button>
+			</div>
+			<div class="videos_stack" id="video_stack">
+				
+			</div>
+		</div>
+
+		<!-- <div class="events_nav">
+			<h1><a href="https://urfu.ru/ru/events/" target="_blank">Мероприятия</a></h1>
+			<div class="event_item">
+				<a class="event_photo event1" href="https://urfu.ru/ru/events/10865/" target="_blank"></a>
+				<a class="event_name" href="https://urfu.ru/ru/events/10865/" target="_blank">Стипендиальная программа «En+group/Русал»</a>
+				<div class="event_date">20 мая – 30 июня</div>
+				<div class="event_description">Проходит прием заявок</div>
+			</div>
+			<div class="event_item">
+				<a class="event_photo event2" href="https://urfu.ru/ru/events/10886/" target="_blank"></a>
+				<a class="event_name" href="https://urfu.ru/ru/events/10886/" target="_blank">III Форум обеспокоенных родителей</a>
+				<div class="event_date">1 июня</div>
+				<div class="event_description">Что ждет абитуриентов 2021 года?</div>
+			</div>
+		</div> -->
+	</div>
+</div>
+</body>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.min.js"></script>
+<script src="script.js"></script>
+</html>

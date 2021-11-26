@@ -1,0 +1,18 @@
+{
+  "name": "urfu_site",
+  "version": "1.0.0",
+  "description": "site for priem.urfu",
+  "main": "script.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "priem",
+    "urfu",
+    "translations"
+  ],
+  "author": "at-55 team",
+  "license": "ISC"
+}
