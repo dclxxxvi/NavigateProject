@@ -5,7 +5,7 @@
 
 //сервисный              8286afd58286afd58286afd56682fc9eed882868286afd5e31a1edcafb45ca23f3841bb
 
-//https://oauth.vk.com/authorize?client_id=8007992&display=page&redirect_uri=&scope=friends,video&response_type=token&v=5.52
+//https://oauth.vk.com/authorize?client_id=8007992&display=page&redirect_uri=&scope=video&response_type=token&v=5.52
 //https://oauth.vk.com/blank.html#access_token=8286afd58286afd58286afd56682fc9eed882868286afd5e31a1edcafb45ca23f3841bb&expires_in=86400&user_id=107712976
 
 // $.ajax({
@@ -52,7 +52,6 @@
 //https://vk.com/club22301031?z=video-22301031_456239490
 
 
-
 function getUrl(method, params) {
 	if (!method) throw new Error('Invalid method');
 	params = params || {};
@@ -70,20 +69,16 @@ function sendRequest(method, params, callback) {
 }
 
 function loadVideos() {
-	sendRequest('video.get',{v: 5.81, owner_id: -22301031, count: 200}, function(data) {
+	sendRequest('video.get',{v: 5.81, owner_id: -22301031, count: 22}, function(data) {
 		showVideos(data.response.items);
 	})
 }
 
-
 function showVideos(videos) {
-	let stack = $('#video_stack');
 	videos.forEach(video => {
-		let link = "https://vk.com/club22301031?z=video-22301031_" + video.id;
-		let imgLink = video.photo_800;
-		console.log(video);
-		stack.append($('<iframe>', {
+		$('#video_stack').append($('<iframe>', {
 			'class': 'video_element', 
+			'id' : 'video_element',
 			'src': video.player, 
 			'frameborder': '0', 
 			'allowfullscreen': 'allowfullscreen'
@@ -94,137 +89,17 @@ function showVideos(videos) {
 
 loadVideos();
 
-//вариант с превъюшками и ссылками
-// stack.append(
-// 	$('<div>', {'class': 'video_element'}).append(
-// 		$('<a>', {'class': 'video_link', 'href': link}).append(
-// 			$('<img>', {'class': 'video_image', 'src': imgLink})
-// 		)
-// 	)
-// );
 
 
 /*
-
-function addVideos(videos) {
-	for (let [key, value] of videos) {
-		let stack = document.getElementById('video_stack');
-		let videoElement = document.createElement('iframe');
-		videoElement.setAttribute('name', key);
-		videoElement.setAttribute('src', value);
-		videoElement.setAttribute('class', 'video_element');
-		videoElement.setAttribute('id', 'video');
-		videoElement.setAttribute('frameborder', '0');
-		videoElement.setAttribute('allowfullscreen', 'allowfullscreen');
-		stack.append(videoElement);
-	}
-}
-
-//........................................Фильтрация........................................................
-
-const stack = document.getElementById('video_stack');
-const videoElement = stack.getElementsByClassName('video_element');
-
-function hideVideos(filter)
-{
-	for (var i = 0; i < videoElement.length; i++) {
-		let tags = videoElement[i].getAttribute('name');
-		if (tags.toLowerCase().indexOf(filter) > -1) {
-	      videoElement[i].style.display = "";
-	    } else {
-	      videoElement[i].style.display = "none";
-		}
-	}
-}
-
-//поиск по уровням......................................................................................
-
-const levelButtons = document.getElementsByName('level');
-
-for (var i = 0; i < levelButtons.length; i++) {
-	levelButtons[i].onclick = levelFilter;
-}
-
-function levelFilter() {
-	for (var i = 0; i < levelButtons.length; i++) {
-		if (levelButtons[i].checked) {
-			let levelButton = levelButtons[i];
-			let filter = levelButton.value.toLowerCase();
-			hideVideos(filter);
-			return;
-		}
-	}
-}
-
-//поиск по тэгам.........................................................................................
-
-const tagButtons = document.getElementsByName('tag');
-
-for (var i = 0; i < tagButtons.length; i++) {
-	tagButtons[i].onclick = tagFilter;
-}
-
-function tagFilter() {
-	for (var i = 0; i < tagButtons.length; i++) {
-		if (tagButtons[i].checked) {
-			let tagButton = tagButtons[i];
-			let filter = tagButton.value.toLowerCase();
-			hideVideos(filter);
-			return;
-		}
-	}
-}
-
-//поиск по видео..........................................................................................
-
-const searchBar = document.getElementById('search_bar');
-searchBar.addEventListener('keyup', videoSearch);
-function videoSearch()
-{
-	let input = document.getElementById('search_bar');
-	let searchString = input.value.toLowerCase();
-	hideVideos(searchString);
-}
-
+вариант с превъюшками и ссылками(производительней, чем iframe)
+let link = "https://vk.com/club22301031?z=video-22301031_" + video.id;
+let imgLink = video.photo_800;
+stack.append(
+	$('<div>', {'class': 'video_element'}).append(
+		$('<a>', {'class': 'video_link', 'href': link}).append(
+			$('<img>', {'class': 'video_image', 'src': imgLink})
+		)
+	)
+);
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function removeVideos(tag)
-// {
-// 	let stack = document.getElementById('video_stack');
-// 	let videos = stack.getElementsByClassName('video_element');
-// 	for (var i = 0; i < videos.length; i++) {
-// 		if (videos[i].name.toLowerCase().indexOf(tag) <= -1)
-// 		{
-// 			videos[i].parentNode.removeChild(videos[i]);
-// 		}
-// 	}
-// }
-// const levelButtons = document.getElementsByName('level');
-// for (var i = 0; i < levelButtons.length; i++) {
-// 	let levelValue = levelButtons[i].value;
-// 	levelButtons[i].onclick = function() {
-// 		addVideos(videoList, levelValue);
-// 		removeVideos(levelValue);
-// 	}
-// }

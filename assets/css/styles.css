@@ -305,6 +305,9 @@ a
 	width: 100%;
 	background-color: #ffffff;
 }
+.videos_stack:nth-child(-n + 2) {
+	justify-content: flex-start;
+}
 
 .video_element
 {
@@ -313,6 +316,7 @@ a
 	height: 150px;
 	margin: 6px;
 	display: flex;
+	border-radius: 5px;
 }
 
 .video_link {
